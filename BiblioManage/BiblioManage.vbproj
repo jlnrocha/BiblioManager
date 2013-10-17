@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0E39CDC2-3A4F-4BFC-9202-9386E9728E5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BiblioManage.My.MyApplication</StartupObject>
+    <RootNamespace>BiblioManage</RootNamespace>
+    <AssemblyName>BiblioManage</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>BiblioManage.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>BiblioManage.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Livroicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\BiblioDbContext.vb" />
+    <Compile Include="Domain\Funcionario.vb" />
+    <Compile Include="FrmAlterarSenha.Designer.vb">
+      <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlterarSenha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBarradeprogresso.Designer.vb">
+      <DependentUpon>FrmBarradeprogresso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBarradeprogresso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaLivros.Designer.vb">
+      <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaLivros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCriarFuncionario.Designer.vb">
+      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCriarFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCriarLogin.Designer.vb">
+      <DependentUpon>FrmCriarLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCriarLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCriarUsuario.Designer.vb">
+      <DependentUpon>FrmCriarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCriarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevolucao.Designer.vb">
+      <DependentUpon>FrmDevolucao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDevolucao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmprestimo.Designer.vb">
+      <DependentUpon>FrmEmprestimo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmprestimo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLivros.Designer.vb">
+      <DependentUpon>FrmLivros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLivros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.vb">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicial.Designer.vb">
+      <DependentUpon>Inicial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmAlterarSenha.resx">
+      <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBarradeprogresso.resx">
+      <DependentUpon>FrmBarradeprogresso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaLivros.resx">
+      <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCriarFuncionario.resx">
+      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCriarLogin.resx">
+      <DependentUpon>FrmCriarLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCriarUsuario.resx">
+      <DependentUpon>FrmCriarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDevolucao.resx">
+      <DependentUpon>FrmDevolucao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmprestimo.resx">
+      <DependentUpon>FrmEmprestimo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLivros.resx">
+      <DependentUpon>FrmLivros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicial.resx">
+      <DependentUpon>Inicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Funcionario.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\wallpaper_livros_007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Livroicon.ico" />
+    <None Include="Resources\livros101.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
