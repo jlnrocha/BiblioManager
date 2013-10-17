@@ -1,6 +1,11 @@
-﻿Public Module MainModule
+﻿Imports System.IO
+
+Public Module MainModule
 
     Public Sub Main()
+
+        ' usado para substituir |DataDirectory| na connection string com o banco de dados.
+        AppDomain.CurrentDomain.SetData("DataDirectory", Application.StartupPath + "\DataBase")
 
         System.Windows.Forms.Application.EnableVisualStyles()
         System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(False)

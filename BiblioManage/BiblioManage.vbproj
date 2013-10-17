@@ -270,10 +270,10 @@
     <None Include="Resources\wallpaper_livros_007.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppData\BiblioDb.mdf">
+    <Content Include="DataBase\BiblioDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="AppData\BiblioDb_log.ldf">
+    <Content Include="DataBase\BiblioDb_log.ldf">
       <DependentUpon>BiblioDb.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
