@@ -1,0 +1,35 @@
+﻿Public Class FrmUsuarios_Antigo
+
+    Dim db As New BiblioDbContext
+
+    Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        db.Usuarios.Load()
+        Me.BindingSource1.DataSource = db.Usuarios.Local.ToBindingList()
+
+        Me.BindingNavigatorSaveItem.Enabled = False
+    End Sub
+
+    Private Sub BindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.BindingSource1.EndEdit()
+        db.SaveChanges()
+
+        Me.BindingNavigatorDeleteItem.Enabled = True
+        Me.BindingNavigatorSaveItem.Enabled = False
+    End Sub
+
+    Private Sub BindingSource1_AddingNew(sender As Object, e As EventArgs) Handles BindingSource1.AddingNew
+
+        Me.BindingNavigatorDeleteItem.Enabled = False
+
+    End Sub
+
+    Private Sub BindingSource1_CurrentItemChanged(sender As Object, e As EventArgs)
+
+        Me.BindingNavigatorSaveItem.Enabled = True
+
+    End Sub
+
+    Private Sub BindingSource1_AddingNew(sender As Object, e As AddingNewEventArgs)
+
+    End Sub
+End Class

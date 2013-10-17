@@ -131,11 +131,10 @@ Partial Class FrmAlterarSenha
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.BackColor = System.Drawing.SystemColors.ControlDark
         Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SALVARToolStripMenuItem, Me.CANCELARToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(394, 24)
+        Me.MenuStrip2.Size = New System.Drawing.Size(358, 24)
         Me.MenuStrip2.TabIndex = 49
         Me.MenuStrip2.Text = "MenuStrip2"
         '
@@ -159,7 +158,7 @@ Partial Class FrmAlterarSenha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(394, 261)
+        Me.ClientSize = New System.Drawing.Size(358, 262)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -172,10 +171,11 @@ Partial Class FrmAlterarSenha
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmAlterarSenha"
-        Me.Text = "Alterar Senha"
+        Me.Text = "FrmAlterarSenha"
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)

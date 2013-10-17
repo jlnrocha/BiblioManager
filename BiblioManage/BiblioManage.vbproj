@@ -8,13 +8,28 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0E39CDC2-3A4F-4BFC-9202-9386E9728E5C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>BiblioManage.My.MyApplication</StartupObject>
+    <StartupObject>Sub Main</StartupObject>
     <RootNamespace>BiblioManage</RootNamespace>
     <AssemblyName>BiblioManage</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -48,11 +63,24 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Livroicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -64,7 +92,9 @@
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
     <Import Include="System.Data" />
+    <Import Include="System.Data.Entity" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
@@ -72,16 +102,45 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Criptografia.vb" />
+    <Compile Include="Domain\BiblioDbContext.vb" />
+    <Compile Include="Domain\Funcionario.vb" />
+    <Compile Include="Domain\Livro.vb" />
+    <Compile Include="Domain\Usuario.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmAlterarSenha.Designer.vb">
       <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmAlterarSenha.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBarradeprogresso.Designer.vb">
+      <DependentUpon>FrmBarradeprogresso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBarradeprogresso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroBase.Designer.vb">
+      <DependentUpon>FrmCadastroBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmConsultaLivros.Designer.vb">
       <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultaLivros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCriarFuncionario.Designer.vb">
+      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCriarFuncionario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCriarLogin.Designer.vb">
@@ -108,6 +167,12 @@
     <Compile Include="FrmEmprestimo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmFuncionarios.Designer.vb">
+      <DependentUpon>FrmFuncionarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFuncionarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLivros.Designer.vb">
       <DependentUpon>FrmLivros.vb</DependentUpon>
     </Compile>
@@ -120,36 +185,25 @@
     <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReservas.Designer.vb">
-      <DependentUpon>FrmReservas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReservas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmUsuarios.Designer.vb">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_consultas.Designer.vb">
-      <DependentUpon>Frm_consultas.vb</DependentUpon>
+    <Compile Include="FrmUsuarios_Antigo.Designer.vb">
+      <DependentUpon>FrmUsuarios_Antigo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_consultas.vb">
+    <Compile Include="FrmUsuarios_Antigo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Funcionarios.Designer.vb">
-      <DependentUpon>Frm_Funcionarios.vb</DependentUpon>
+    <Compile Include="FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Funcionarios.vb">
+    <Compile Include="FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicial.Designer.vb">
-      <DependentUpon>Inicial.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Inicial.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MainModule.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -165,19 +219,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Splash.Designer.vb">
-      <DependentUpon>Splash.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Splash.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAlterarSenha.resx">
       <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBarradeprogresso.resx">
+      <DependentUpon>FrmBarradeprogresso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroBase.resx">
+      <DependentUpon>FrmCadastroBase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaLivros.resx">
       <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCriarFuncionario.resx">
+      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCriarLogin.resx">
       <DependentUpon>FrmCriarLogin.vb</DependentUpon>
@@ -191,26 +251,23 @@
     <EmbeddedResource Include="FrmEmprestimo.resx">
       <DependentUpon>FrmEmprestimo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmFuncionarios.resx">
+      <DependentUpon>FrmFuncionarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLivros.resx">
       <DependentUpon>FrmLivros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmReservas.resx">
-      <DependentUpon>FrmReservas.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_consultas.resx">
-      <DependentUpon>Frm_consultas.vb</DependentUpon>
+    <EmbeddedResource Include="FrmUsuarios_Antigo.resx">
+      <DependentUpon>FrmUsuarios_Antigo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Funcionarios.resx">
-      <DependentUpon>Frm_Funcionarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicial.resx">
-      <DependentUpon>Inicial.vb</DependentUpon>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -218,20 +275,67 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Splash.resx">
-      <DependentUpon>Splash.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\Funcionario.datasource" />
+    <None Include="My Project\DataSources\Livro.datasource" />
+    <None Include="My Project\DataSources\Usuario.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\wallpaper_livros_007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppData\BiblioDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppData\BiblioDb_log.ldf">
+      <DependentUpon>BiblioDb.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Livroicon.ico" />
+    <None Include="Resources\livros101.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

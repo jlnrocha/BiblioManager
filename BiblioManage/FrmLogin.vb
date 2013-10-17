@@ -1,38 +1,55 @@
 ﻿Public Class FrmLogin
 
-    ' TODO: Insert code to perform custom authentication using the provided username and password 
-    ' (See http://go.microsoft.com/fwlink/?LinkId=35339).  
-    ' The custom principal can then be attached to the current thread's principal as follows: 
-    '     My.User.CurrentPrincipal = CustomPrincipal
-    ' where CustomPrincipal is the IPrincipal implementation used to perform authentication. 
-    ' Subsequently, My.User will return identity information encapsulated in the CustomPrincipal object
-    ' such as the username, display name, etc.
+    Dim db As New BiblioDbContext
+
+    Property Autenticado As Boolean
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        If nometxtbox.Text = "diogo" And Senhatxtbox.Text = "1234" Then
-            Inicial.Show()
+        'Para ignorar login
+        'Me.Hide()
+        'Inicial.Show()
+        'Return
+
+        Dim resultados As IQueryable(Of Funcionario)
+
+        resultados = From dbFunc In db.Funcionarios
+                     Where dbFunc.NomeUsuario = nometxtbox.Text
+                     Select dbFunc
+
+        If resultados.Count() = 1 Then
+
+            Dim funcionario = resultados.First()
+
+            If Criptografia.VerificaHash(funcionario.Senha, Senhatxtbox.Text) Then
+                Me.Autenticado = True
+                Me.Close()
+            Else
+                MessageBox.Show("Senha incorreta!", "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+        Else
+            MessageBox.Show("Usuario incorreto!", "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Me.Senhatxtbox.Text = ""
+            Me.Senhatxtbox.Focus()
         End If
-        Me.Hide()
+
+        resultados = Nothing
     End Sub
 
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
         Me.Close()
     End Sub
 
-    Private Sub Senhatxtbox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Senhatxtbox.TextChanged
+    Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        System.Data.Entity.Database.SetInitializer(New BiblioContextInitializer())
+
+        Me.nometxtbox.Focus()
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-
-    End Sub
-
-    Private Sub LogoPictureBox_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LogoPictureBox.Click
-
-    End Sub
-
-
-    Private Sub PasswordLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PasswordLabel.Click
+    Private Sub PasswordLabel_Click(sender As Object, e As EventArgs) Handles PasswordLabel.Click
 
     End Sub
 End Class
