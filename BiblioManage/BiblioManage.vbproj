@@ -48,24 +48,11 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Livroicon.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -85,30 +72,16 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\BiblioDbContext.vb" />
-    <Compile Include="Domain\Funcionario.vb" />
     <Compile Include="FrmAlterarSenha.Designer.vb">
       <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmAlterarSenha.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBarradeprogresso.Designer.vb">
-      <DependentUpon>FrmBarradeprogresso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBarradeprogresso.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmConsultaLivros.Designer.vb">
       <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultaLivros.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCriarFuncionario.Designer.vb">
-      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCriarFuncionario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCriarLogin.Designer.vb">
@@ -147,10 +120,28 @@
     <Compile Include="FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmReservas.Designer.vb">
+      <DependentUpon>FrmReservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmUsuarios.Designer.vb">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_consultas.Designer.vb">
+      <DependentUpon>Frm_consultas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_consultas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Funcionarios.Designer.vb">
+      <DependentUpon>Frm_Funcionarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Funcionarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicial.Designer.vb">
@@ -174,19 +165,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmAlterarSenha.resx">
       <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBarradeprogresso.resx">
-      <DependentUpon>FrmBarradeprogresso.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaLivros.resx">
       <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCriarFuncionario.resx">
-      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCriarLogin.resx">
       <DependentUpon>FrmCriarLogin.vb</DependentUpon>
@@ -206,8 +197,17 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReservas.resx">
+      <DependentUpon>FrmReservas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_consultas.resx">
+      <DependentUpon>Frm_consultas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Funcionarios.resx">
+      <DependentUpon>Frm_Funcionarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicial.resx">
       <DependentUpon>Inicial.vb</DependentUpon>
@@ -218,28 +218,20 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\DataSources\Funcionario.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="Resources\wallpaper_livros_007.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Livroicon.ico" />
-    <None Include="Resources\livros101.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

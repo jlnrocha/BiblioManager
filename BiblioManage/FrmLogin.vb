@@ -9,39 +9,30 @@
     ' such as the username, display name, etc.
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-
-        Me.Hide()
-
-        Inicial.Show()
-
-        Return
-
-        Dim db As New BiblioDbContext
-
-        Dim resultados = From t In db.Funcionarios
-                         Where t.NomeUsuario = nometxtbox.Text And t.Senha = Senhatxtbox.Text
-                         Select t
-
-        If resultados.Count() = 1 Then
-            FrmBarraDeProgresso.Show()
+        If nometxtbox.Text = "diogo" And Senhatxtbox.Text = "1234" Then
+            Inicial.Show()
         End If
-
-        db.Dispose()
-
         Me.Hide()
     End Sub
 
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
 
-    Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        System.Data.Entity.Database.SetInitializer(New BiblioContextInitializer())
-
-
-
+    Private Sub Senhatxtbox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Senhatxtbox.TextChanged
 
     End Sub
 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+    End Sub
+
+    Private Sub LogoPictureBox_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LogoPictureBox.Click
+
+    End Sub
+
+
+    Private Sub PasswordLabel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PasswordLabel.Click
+
+    End Sub
 End Class

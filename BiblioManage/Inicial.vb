@@ -30,7 +30,7 @@
 
     End Sub
 
-    Private Sub UsuárioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub UsuárioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UsuárioToolStripMenuItem.Click
         FrmCriarUsuario.Show()
     End Sub
 
@@ -54,7 +54,43 @@
         FrmConsultaLivros.Show()
     End Sub
 
-    Private Sub FuncionárioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FuncionárioToolStripMenuItem.Click
-        FrmCriarFuncionario.Show()
+    Private Sub SAIRToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAIRToolStripMenuItem.Click
+        Close()
+    End Sub
+
+    Private Sub MultasToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MultasToolStripMenuItem1.Click
+
+    End Sub
+
+    Private Sub DevoluçãoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DevoluçãoToolStripMenuItem.Click
+        FrmDevolucao.Show()
+    End Sub
+
+    Private Sub ReservasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReservasToolStripMenuItem.Click
+        FrmReservas.Show()
+    End Sub
+
+    Private Sub Inicial_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        FrmDevolucao.Show()
+
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        FrmEmprestimo.Show()
+
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        FrmConsultaLivros.Show()
+
+    End Sub
+
+    Private Sub FuncionáriosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FuncionáriosToolStripMenuItem.Click
+        Frm_Funcionarios.Show()
+
     End Sub
 End Class

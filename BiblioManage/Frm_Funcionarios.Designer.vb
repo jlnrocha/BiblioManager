@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmUsuarios
+Partial Class Frm_Funcionarios
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,10 +22,7 @@ Partial Class FrmUsuarios
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuarios))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.SALVARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CANCELARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_Funcionarios))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
@@ -57,41 +54,33 @@ Partial Class FrmUsuarios
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.SALVARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CANCELARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LIMPARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1.SuspendLayout()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SALVARToolStripMenuItem, Me.CANCELARToolStripMenuItem, Me.LIMPARToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(728, 24)
-        Me.MenuStrip1.TabIndex = 35
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'SALVARToolStripMenuItem
-        '
-        Me.SALVARToolStripMenuItem.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SALVARToolStripMenuItem.Image = CType(resources.GetObject("SALVARToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SALVARToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.SALVARToolStripMenuItem.Name = "SALVARToolStripMenuItem"
-        Me.SALVARToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
-        Me.SALVARToolStripMenuItem.Text = "Salvar"
-        '
-        'CANCELARToolStripMenuItem
-        '
-        Me.CANCELARToolStripMenuItem.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CANCELARToolStripMenuItem.Image = CType(resources.GetObject("CANCELARToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.CANCELARToolStripMenuItem.Name = "CANCELARToolStripMenuItem"
-        Me.CANCELARToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
-        Me.CANCELARToolStripMenuItem.Text = "Limpar"
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.Controls.Add(Me.TextBox16)
+        Me.GroupBox1.Controls.Add(Me.Label18)
+        Me.GroupBox1.Controls.Add(Me.TextBox15)
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.TextBox14)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.TextBox13)
+        Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBox12)
         Me.GroupBox1.Controls.Add(Me.Label14)
@@ -121,26 +110,26 @@ Partial Class FrmUsuarios
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(28, 78)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 77)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(647, 288)
-        Me.GroupBox1.TabIndex = 36
+        Me.GroupBox1.Size = New System.Drawing.Size(605, 314)
+        Me.GroupBox1.TabIndex = 61
         Me.GroupBox1.TabStop = False
         '
         'Button1
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(461, 162)
+        Me.Button1.Location = New System.Drawing.Point(504, 156)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(36, 33)
+        Me.Button1.Size = New System.Drawing.Size(36, 36)
         Me.Button1.TabIndex = 78
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(298, 136)
+        Me.TextBox12.Location = New System.Drawing.Point(300, 136)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(199, 20)
+        Me.TextBox12.Size = New System.Drawing.Size(240, 20)
         Me.TextBox12.TabIndex = 77
         '
         'Label14
@@ -155,16 +144,16 @@ Partial Class FrmUsuarios
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(298, 60)
+        Me.TextBox11.Location = New System.Drawing.Point(311, 60)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(199, 20)
+        Me.TextBox11.Size = New System.Drawing.Size(229, 20)
         Me.TextBox11.TabIndex = 75
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(269, 66)
+        Me.Label13.Location = New System.Drawing.Point(280, 63)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(25, 13)
         Me.Label13.TabIndex = 74
@@ -198,21 +187,21 @@ Partial Class FrmUsuarios
         '
         Me.TextBox10.Location = New System.Drawing.Point(95, 220)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(402, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(445, 20)
         Me.TextBox10.TabIndex = 71
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(343, 197)
+        Me.TextBox9.Location = New System.Drawing.Point(359, 197)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(154, 20)
+        Me.TextBox9.Size = New System.Drawing.Size(181, 20)
         Me.TextBox9.TabIndex = 70
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(274, 201)
+        Me.Label12.Location = New System.Drawing.Point(290, 201)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(63, 13)
         Me.Label12.TabIndex = 69
@@ -232,7 +221,7 @@ Partial Class FrmUsuarios
         '
         Me.TextBox6.Location = New System.Drawing.Point(95, 194)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(124, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(142, 20)
         Me.TextBox6.TabIndex = 67
         '
         'Label10
@@ -248,16 +237,17 @@ Partial Class FrmUsuarios
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(252, 166)
+        Me.ComboBox1.Location = New System.Drawing.Point(272, 166)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(40, 21)
         Me.ComboBox1.TabIndex = 65
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(95, 31)
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox8.Location = New System.Drawing.Point(99, 19)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(87, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(87, 29)
         Me.TextBox8.TabIndex = 64
         '
         'Label8
@@ -272,16 +262,16 @@ Partial Class FrmUsuarios
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(332, 166)
+        Me.TextBox7.Location = New System.Drawing.Point(359, 166)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(123, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(138, 20)
         Me.TextBox7.TabIndex = 62
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(298, 169)
+        Me.Label9.Location = New System.Drawing.Point(320, 169)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(31, 13)
         Me.Label9.TabIndex = 61
@@ -291,7 +281,7 @@ Partial Class FrmUsuarios
         '
         Me.TextBox5.Location = New System.Drawing.Point(95, 166)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(124, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(142, 20)
         Me.TextBox5.TabIndex = 59
         '
         'Label6
@@ -308,7 +298,7 @@ Partial Class FrmUsuarios
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(225, 169)
+        Me.Label5.Location = New System.Drawing.Point(243, 169)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(23, 13)
         Me.Label5.TabIndex = 57
@@ -325,7 +315,7 @@ Partial Class FrmUsuarios
         '
         Me.TextBox3.Location = New System.Drawing.Point(95, 114)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(402, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(445, 20)
         Me.TextBox3.TabIndex = 55
         '
         'Label4
@@ -362,7 +352,7 @@ Partial Class FrmUsuarios
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 66)
+        Me.Label1.Location = New System.Drawing.Point(20, 63)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(30, 13)
         Me.Label1.TabIndex = 51
@@ -372,25 +362,52 @@ Partial Class FrmUsuarios
         '
         Me.TextBox2.Location = New System.Drawing.Point(95, 88)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(402, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(445, 20)
         Me.TextBox2.TabIndex = 50
         '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(95, 60)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(151, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(171, 20)
         Me.TextBox1.TabIndex = 49
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(198, 38)
+        Me.Label7.Location = New System.Drawing.Point(153, 50)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(276, 24)
-        Me.Label7.TabIndex = 60
-        Me.Label7.Text = "CADASTRO DE USUÁRIOS"
+        Me.Label7.Size = New System.Drawing.Size(325, 24)
+        Me.Label7.TabIndex = 62
+        Me.Label7.Text = "CADASTRO DE FUNCIONÁRIOS"
+        '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SALVARToolStripMenuItem, Me.CANCELARToolStripMenuItem, Me.LIMPARToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(685, 24)
+        Me.MenuStrip2.TabIndex = 64
+        Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'SALVARToolStripMenuItem
+        '
+        Me.SALVARToolStripMenuItem.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SALVARToolStripMenuItem.Image = CType(resources.GetObject("SALVARToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SALVARToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.SALVARToolStripMenuItem.Name = "SALVARToolStripMenuItem"
+        Me.SALVARToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
+        Me.SALVARToolStripMenuItem.Text = "Salvar"
+        '
+        'CANCELARToolStripMenuItem
+        '
+        Me.CANCELARToolStripMenuItem.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CANCELARToolStripMenuItem.Image = CType(resources.GetObject("CANCELARToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CANCELARToolStripMenuItem.Name = "CANCELARToolStripMenuItem"
+        Me.CANCELARToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.CANCELARToolStripMenuItem.Text = "Limpar"
         '
         'LIMPARToolStripMenuItem
         '
@@ -400,30 +417,96 @@ Partial Class FrmUsuarios
         Me.LIMPARToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.LIMPARToolStripMenuItem.Text = "Sair"
         '
-        'FrmUsuarios
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(20, 252)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(50, 13)
+        Me.Label15.TabIndex = 79
+        Me.Label15.Text = "CARGO"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(99, 251)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(213, 20)
+        Me.TextBox13.TabIndex = 80
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(323, 254)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(108, 13)
+        Me.Label16.TabIndex = 81
+        Me.Label16.Text = "DATA ADMISSÃO"
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(437, 249)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(103, 20)
+        Me.TextBox14.TabIndex = 82
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(20, 280)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(60, 13)
+        Me.Label17.TabIndex = 83
+        Me.Label17.Text = "SALÁRIO"
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(99, 277)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(213, 20)
+        Me.TextBox15.TabIndex = 84
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(323, 280)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(108, 13)
+        Me.Label18.TabIndex = 85
+        Me.Label18.Text = "DATA DEMISSÃO"
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Location = New System.Drawing.Point(437, 277)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(103, 20)
+        Me.TextBox16.TabIndex = 86
+        '
+        'Frm_Funcionarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(728, 397)
+        Me.ClientSize = New System.Drawing.Size(685, 413)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label7)
-        Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "FrmUsuarios"
-        Me.Text = "CADASTRO DE USUÁRIOS"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.Name = "Frm_Funcionarios"
+        Me.Text = "Frm_Funcionarios"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents SALVARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CANCELARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
@@ -451,8 +534,16 @@ Partial Class FrmUsuarios
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents MenuStrip2 As System.Windows.Forms.MenuStrip
+    Friend WithEvents SALVARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CANCELARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LIMPARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class
