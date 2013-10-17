@@ -271,11 +271,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\BiblioDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DataBase\BiblioDb_log.ldf">
       <DependentUpon>BiblioDb.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Livroicon.ico" />
     <None Include="Resources\livros101.jpg" />
