@@ -107,12 +107,6 @@
     <Compile Include="Domain\Funcionario.vb" />
     <Compile Include="Domain\Livro.vb" />
     <Compile Include="Domain\Usuario.vb" />
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmAlterarSenha.Designer.vb">
       <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
     </Compile>
@@ -135,12 +129,6 @@
       <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultaLivros.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCriarFuncionario.Designer.vb">
-      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCriarFuncionario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCriarLogin.Designer.vb">
@@ -191,12 +179,6 @@
     <Compile Include="FrmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarios_Antigo.Designer.vb">
-      <DependentUpon>FrmUsuarios_Antigo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmUsuarios_Antigo.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmPrincipal.Designer.vb">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
@@ -221,9 +203,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAlterarSenha.resx">
       <DependentUpon>FrmAlterarSenha.vb</DependentUpon>
     </EmbeddedResource>
@@ -235,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaLivros.resx">
       <DependentUpon>FrmConsultaLivros.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCriarFuncionario.resx">
-      <DependentUpon>FrmCriarFuncionario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCriarLogin.resx">
       <DependentUpon>FrmCriarLogin.vb</DependentUpon>
@@ -262,9 +238,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarios_Antigo.resx">
-      <DependentUpon>FrmUsuarios_Antigo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>

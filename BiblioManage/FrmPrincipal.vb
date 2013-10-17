@@ -38,7 +38,8 @@
     End Sub
 
     Private Sub RetiradaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RetiradaToolStripMenuItem.Click
-        Dim frm As New FrmUsuarios_Antigo
+        Dim frm As New FrmEmprestimo
+
         frm.MdiParent = Me
         frm.WindowState = FormWindowState.Maximized
         frm.Show()
@@ -48,7 +49,8 @@
     End Sub
 
     Private Sub UsuárioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim frm As New FrmUsuarios_Antigo
+        Dim frm As New FrmCriarUsuario
+
         frm.MdiParent = Me
         frm.WindowState = FormWindowState.Maximized
         frm.Show()
@@ -57,7 +59,8 @@
     End Sub
 
     Private Sub LoginToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoginToolStripMenuItem.Click
-        Dim frm As New FrmUsuarios_Antigo
+        Dim frm As New FrmCriarLogin
+
         frm.MdiParent = Me
         frm.WindowState = FormWindowState.Maximized
         frm.Show()
@@ -71,7 +74,8 @@
     End Sub
 
     Private Sub SenhaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SenhaToolStripMenuItem.Click
-        Dim frm As New FrmUsuarios_Antigo
+        Dim frm As New FrmAlterarSenha
+
         frm.MdiParent = Me
         frm.WindowState = FormWindowState.Maximized
         frm.Show()
@@ -80,7 +84,8 @@
     End Sub
 
     Private Sub CadastroToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CadastroToolStripMenuItem2.Click
-        Dim frm As New FrmUsuarios_Antigo
+        Dim frm As New FrmCriarUsuario
+
         frm.MdiParent = Me
         frm.WindowState = FormWindowState.Maximized
         frm.Show()
@@ -89,7 +94,8 @@
     End Sub
 
     Private Sub LivrosToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LivrosToolStripMenuItem1.Click
-        Dim frm As New FrmUsuarios_Antigo
+        Dim frm As New FrmLivros
+
         frm.MdiParent = Me
         frm.WindowState = FormWindowState.Maximized
         frm.Show()
